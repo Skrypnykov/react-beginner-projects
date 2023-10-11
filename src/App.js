@@ -24,11 +24,11 @@ function App() {
   return (
     <div className="App">
       <button onClick={() => setOpen(true)} className="open-modal-btn">
-        ✨ Открыть окно
+        ✨ Відкрити вікно
       </button>
       <Modal open={open} setOpen={setOpen}>
         <img src="https://media2.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" />
-        <h3>Это модальное окно</h3>
+        <h3>Це модальне вікно</h3>
       </Modal>
     </div>
   );
