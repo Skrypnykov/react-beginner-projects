@@ -3,25 +3,25 @@ import "./index.scss";
 
 const questions = [
   {
-    title: "React - это ... ?",
-    variants: ["библиотека", "фреймворк", "приложение"],
+    title: "React - це ... ?",
+    variants: ["бібліотека", "фреймворк", "додаток"],
     correct: 0,
   },
   {
-    title: "Компонент - это ... ",
+    title: "Компонент - це ... ",
     variants: [
-      "приложение",
-      "часть приложения или страницы",
-      "то, что я не знаю что такое",
+      "додаток",
+      "частина програми або сторінки",
+      "те, що я не знаю що таке",
     ],
     correct: 1,
   },
   {
-    title: "Что такое JSX?",
+    title: "Що таке JSX?",
     variants: [
-      "Это простой HTML",
-      "Это функция",
-      "Это тот же HTML, но с возможностью выполнять JS-код",
+      "Це простий HTML",
+      "Це функція",
+      "Це той же HTML, але з можливістю виконувати JS-код",
     ],
     correct: 2,
   },
@@ -32,10 +32,10 @@ function Result({ correct }) {
     <div className="result">
       <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
       <h2>
-        Вы отгадали {correct} ответа из {questions.length}
+        Ви відгадали {correct} відповіді з {questions.length}
       </h2>
       <a href="/">
-        <button>Попробовать снова</button>
+        <button>Спробувати знову</button>
       </a>
     </div>
   );
