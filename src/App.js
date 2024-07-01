@@ -1,27 +1,23 @@
-import React from "react";
-import "./index.scss";
+import React from 'react';
+import './index.scss';
 
 const questions = [
   {
-    title: "React - це ... ?",
-    variants: ["бібліотека", "фреймворк", "додаток"],
+    title: 'React - це ... ?',
+    variants: ['бібліотека', 'фреймворк', 'додаток'],
     correct: 0,
   },
   {
-    title: "Компонент - це ... ",
-    variants: [
-      "додаток",
-      "частина програми або сторінки",
-      "те, що я не знаю що таке",
-    ],
+    title: 'Компонент - це ... ',
+    variants: ['додаток', 'частина програми або сторінки', 'те, що я не знаю що таке'],
     correct: 1,
   },
   {
-    title: "Що таке JSX?",
+    title: 'Що таке JSX?',
     variants: [
-      "Це простий HTML",
-      "Це функція",
-      "Це той же HTML, але з можливістю виконувати JS-код",
+      'Це простий HTML',
+      'Це функція',
+      'Це той же HTML, але з можливістю виконувати JS-код',
     ],
     correct: 2,
   },
@@ -30,7 +26,7 @@ const questions = [
 function Result({ correct }) {
   return (
     <div className="result">
-      <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
+      <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" alt='result' />
       <h2>
         Ви відгадали {correct} відповіді з {questions.length}
       </h2>
@@ -47,10 +43,7 @@ function Game({ step, question, onClickVariant }) {
   return (
     <>
       <div className="progress">
-        <div
-          style={{ width: `${percentage}%` }}
-          className="progress__inner"
-        ></div>
+        <div style={{ width: `${percentage}%` }} className="progress__inner"></div>
       </div>
       <h1>{question.title}</h1>
       <ul>
@@ -73,7 +66,7 @@ function App() {
     console.log(step, index);
     setStep(step + 1);
 
-    if (index == question.correct) {
+    if (index === question.correct) {
       setCorrect(correct + 1);
     }
   };
